@@ -23,18 +23,19 @@ a:hover {
   color: #ff8800;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: top;
-  min-width: 320px;
-  min-height: 100vh;
-}
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+
+  h1 {
+    font-size: 4vw; /* Ajuste responsivo */
+    line-height: 1.1;
+  }
+  
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 5vw; /* Tamaño más grande para pantallas pequeñas */
+    }
+  }
+
 
 button {
   border-radius: 10px;
@@ -71,22 +72,48 @@ button:focus-visible {
 
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
   background-color: #202020;
+}
 
+nav > img {
+  height: auto; 
+  width: auto; 
+  max-width: 100px;
+  padding-left: 20px;
 }
 
 nav > div {
   display: flex;
   gap: 10px;
-  width: 100%;
-  padding: 20px;
+  flex-grow: 1; 
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+
+body {
+  margin: 0;
 }
 
 nav > img {
-  padding-right: 600px; 
+  height: auto;
+  width: auto;
+  max-width: 100px; 
+  padding-left: 20px;
+}
+
+.imagen-bienvenida {
+  max-width: 100%; 
+  height: auto; 
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .imagen-bienvenida {
+    max-width: 50%; 
+  }
 }
 
 
