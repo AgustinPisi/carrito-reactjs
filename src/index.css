@@ -15,30 +15,26 @@
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
-}
-a:hover {
-  color: #ff8800;
 }
 
 
 
   h1 {
-    font-size: 4vw; /* Ajuste responsivo */
+    font-size: 2vw; 
+    margin-bottom: 40px;
     line-height: 1.1;
   }
   
   @media (max-width: 600px) {
     h1 {
-      font-size: 5vw; /* Tamaño más grande para pantallas pequeñas */
+      font-size: 5vw; 
     }
   }
 
 
-button {
-  border-radius: 10px;
+.boton {
+  border-radius: 7px;
   border: 2px solid transparent;
   padding: 0.6em;
   font-size: 1em;
@@ -48,26 +44,24 @@ button {
   cursor: pointer;
   transition: border-color 0.45s;
   color: rgb(255, 230, 0);
+  margin-right: 5px;
 }
-button:hover {
+.boton:hover {
   border-color: #ff7300;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.boton:focus,
+.boton:focus-visible {
+  outline: 4px;
+  outline-color:rgb(255, 230, 0);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.botoneraBarra {
+  display: flex;
+  align-items: center;
+}
+
+#carritoMasChico {
+  padding: 0.2em;
 }
 
 nav {
@@ -97,23 +91,11 @@ body {
   margin: 0;
 }
 
-nav > img {
+#imagenLogo {
   height: auto;
   width: auto;
   max-width: 100px; 
   padding-left: 20px;
-}
-
-.imagen-bienvenida {
-  max-width: 100%; 
-  height: auto; 
-  align-items: center;
-}
-
-@media (max-width: 600px) {
-  .imagen-bienvenida {
-    max-width: 50%; 
-  }
 }
 
 

@@ -1,12 +1,34 @@
-import bienvenida from './assets/imagenBienvenida.jpeg'
+
+import { useState, useEffect } from 'react';
+import { getProducts, getProductsByCategory } from '../../asyncMock';
+import ItemList from '../ItemList/ItemList';
+
+import { useParams } from 'react-router-dom'
+
 
 const ItemListContainer = ({ greeting }) => {
-    return (
-        <div>
-            <h1>{greeting}</h1>
-            <img src={bienvenida} alt="imagen-bienvenida" className="imagen-bienvenida"/>
-        </div>
-    )
-}
+  const [products, setProducts] = useState([]);
 
-export default ItemListContainer
+  const { categoryId } = useParams()
+
+useEffect(() => {
+  const asyncFunc = categoryId ? getProductsByCategory : getProducts
+
+  asyncFunc(categoryId)
+    .then(response => {
+      setProducts(response)
+    })
+    .catch(error => {
+      console.error(error)
+    })
+}, [categoryId])
+
+  return (
+    <div>
+      <h1>{greeting}</h1>
+      <ItemList products={products}/>
+    </div>
+  );
+};
+
+export default ItemListContainer;
