@@ -25,14 +25,14 @@
   .ItemHeader {
     margin: 0;
     font-size: 1.5em;
-    color: rgb(255, 230, 0); /* Agregando color de texto blanco para contraste */
+    color: rgb(255, 230, 0); 
   }
   
   .ItemImg {
     width: 100%;
     display: block;
     height: auto;
-    object-fit: cover; /* Ajusta la imagen para cubrir el área sin deformarse */
+    object-fit: cover; 
   }
   
   .Info {
@@ -73,7 +73,7 @@
   
   @media (max-width: 768px) {
     .CardItem {
-      width: 100%; /* Las tarjetas ocuparán el ancho completo en dispositivos móviles */
+      width: 100%; 
     }
   }
   
