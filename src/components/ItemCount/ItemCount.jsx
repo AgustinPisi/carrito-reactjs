@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './ItemCount.css'
+import SAlert from "../SAlerts/SAlerts"
 
 const ItemCount = ({stock, initial, onAdd}) => {
     const [quantity, setQuantity] = useState(initial)
@@ -15,6 +16,14 @@ const ItemCount = ({stock, initial, onAdd}) => {
         setQuantity(quantity - 1)
       }
     }
+
+    const addCarrito = () => {
+      onAdd(quantity);
+      SAlert.fire({
+        icon: "success",
+        title: "Producto agregado al carrito!"
+    });
+    }
   
 
   return (
@@ -25,7 +34,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
         <button className="boton" onClick={increment}>+</button>
       </div>
       <div>
-        <button className="boton" onClick={() => onAdd(quantity)} disabled={!stock}>
+        <button className="boton" onClick={addCarrito} disabled={!stock}>
           Agregar al carrito
         </button>
       </div>
