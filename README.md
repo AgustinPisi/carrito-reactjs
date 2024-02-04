@@ -1,8 +1,7 @@
-# React + Vite
+¡A tener en cuenta!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1-  Si bien siempre es bueno hacerlo por temas de seguridad, en este caso como excepción la configuración del Firebase no fue pasada a un archivo .env, esto es debido a que no vi la necesidad de usar Vercel, por lo que si armaba un archivo .env para cuidar mis datos y lo agregaba a GitIgnore, su acceso al firebase se vería limitado.
 
-Currently, two official plugins are available:
+2- Por preferencias personales el asyncMock.jsx no fue eliminado ya que me interesa tenerlo como un respaldo, pueden sacarlo y ver que sin el, el proyecto funciona perfectamente de cualquier manera.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3- Les dejo un Gif con la navegación de la página subido a un link de google drive. Prefiero hacerlo de esta manera en vez de que quede perdido entre tantos archivos del proyecto.
