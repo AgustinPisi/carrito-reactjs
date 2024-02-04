@@ -1,6 +1,6 @@
 ¡A tener en cuenta!
 
-1- En los comentarios les dejo las crdenciales del .env
+1- En los comentarios les dejo las credenciales del .env
 
 2- Por preferencias personales el asyncMock.jsx no fue eliminado ya que me interesa tenerlo como un respaldo, pueden sacarlo y ver que sin el, el proyecto funciona perfectamente de cualquier manera.
 
